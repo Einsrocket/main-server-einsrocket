@@ -110,7 +110,7 @@ const SendActivationCode = async (req, res) => {
                             <li>
                                 entre em
                                 <a
-                                    href="http://einsrocket.netlify.app/reset_passsword"
+                                    href="https://einsrocket.netlify.app/reset_password"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >einsrocket.netlify.app/reset_passsword</a
