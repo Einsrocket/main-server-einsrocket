@@ -79,7 +79,9 @@ const addUser = async (req, res) => {
                                 });
                             //if there are no users with a similar password
                             else if (result.length == 0) {
-                                let sqlInsert = `insert into users (email, password, username, is_premium, conections, next_payment_day, entry_date, made_tutorial) values('${email}', '${hashedPassword}', '${username}', 'false', 0, '${NextPaymentDay}', '${EntryDate}', 'false');`;
+                                let sqlInsert = `insert into users (email, password, username, is_premium, conections, next_payment_day, entry_date, made_tutorial, activation_code) values('${email}', '${hashedPassword}', '${username}', 'false', 0, '${NextPaymentDay}', '${EntryDate}', 'false', ${
+                                    8347 + Math.floor(Math.random() * 17836)
+                                });`;
 
                                 //inserting a new user into the database
                                 db.query(sqlInsert, (err, result) => {

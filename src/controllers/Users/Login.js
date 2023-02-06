@@ -7,7 +7,7 @@ const secret = "well, well, that is a secret I guess";
 
 // handle user registation 1
 const LoginUser = async (req, res) => {
-    const { username, password, email, } = req.body;
+    const { password, email } = req.body;
     const token = await JWT.sign({ password }, secret, {
         expiresIn: 1209600,
     });
@@ -25,7 +25,7 @@ const LoginUser = async (req, res) => {
     };
 
     //if the input values where  provided 2
-    let sqlSelect = `select * from users where username = '${username}';`;
+    let sqlSelect = `select * from users where email = '${email}';`;
 
     db.query(sqlSelect, (err, result) => {
         //if there was found any user with the value provided 3
