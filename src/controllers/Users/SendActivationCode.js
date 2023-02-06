@@ -11,7 +11,8 @@ const SendActivationCode = async (req, res) => {
         secure: true,
         auth: {
             user: "einsrocket00@gmail.com",
-            pass: "ljwmmtlcguzxujhw",
+            // pass: "atentção_osmtpdoljwmmtlcguzxujhw",
+            pass: process.env.smtp_gmail,
         },
     });
 
